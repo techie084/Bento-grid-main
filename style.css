@@ -1,5 +1,5 @@
 /* ---- */
- *,
+*,
 *::before,
 *::after {
   margin: 0;
@@ -20,12 +20,11 @@
 
   /* ---- ## Typography ## ---- */
   /* ---- ### Body Copy ### ----*/
-  --Font-Weights-1: 400,
-  --Font-Weights-2: 500,
+  --Font-Weights: 400, 500,
 }
 
 /* ---- General styling for images ---- */
-img{
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -37,7 +36,7 @@ body {
   background: var(--gray-bg);
   font-style: normal;
   font-optical-sizing: auto;
-  font-weight: var(--Font-Weights-1,--Font-Weights-2);
+  font-weight: var(--Font-Weights);
   font-family: "DM Sans", serif;
 }
 
@@ -50,7 +49,7 @@ body {
 }
 
 /* ---- Box -1 ---- */
-.box-1{
+.box-1 {
   background: var(--Purple-500);
   padding: 2.2rem;
   border-radius: 10px;
@@ -60,48 +59,49 @@ body {
   place-content: center;
   text-align: center;
   h3 {
-    font-size: clamp(3rem,1rem + 7vw ,2rem);
+    font-size: clamp(2.7rem,2.7rem ,3rem);
     margin-bottom: 1rem;
   }
-  .color-txt{
+  .color-txt {
     color: var(--Yellow-500);
   }
-  .italic-txt{
+  .italic-txt {
     font-style: italic;
   }
+
   p {
     margin-top: 0.5rem;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.2rem, 1.5rem);
   }
-  img{
+  img {
     width: 65%;
   }
 }
 
-.box-2{
+.box-2 {
   background: var(--White);
   padding: 1em;
   border-radius: 10px;
-  p{
+  p {
     margin-top: 1rem;
     font-size: 1.9rem;
   }
 }
 
-.box-3{
+.box-3 {
   background: var(--Yellow-500);
   padding: 1em 1em 0 1em;
   border-radius: 10px;
-  p{
+  p {
     font-size: 2rem;
   }
-  img{
+  img {
     margin-top: 1rem;
     width: 50%;
   }
 }
 
-.box-4{
+.box-4 {
   background: var(--Purple-100);
   padding: 1rem;
   border-radius: 10px;
@@ -116,7 +116,7 @@ body {
   }
 }
 
-.box-5{
+.box-5 {
   border-radius: 10px;
   background: var(--Purple-500);
   padding: 1.5rem 3rem;
@@ -130,24 +130,23 @@ body {
   }
 }
 
-.box-6{
+.box-6 {
   border-radius: 10px;
   padding: 1rem;
   background: var(--White);
   h2{
     font-size: 3rem;
-    margin-bottom: 1rem;
   }
   p{
-    font-size: 1.rem;
-    margin-bottom: 0.7rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
   img{
     width: 50%;
   }
 }
 
-.box-7{
+.box-7 {
   background: var(--Yellow-100);
   padding: 1rem;
   border-radius: 10px;
@@ -162,7 +161,7 @@ body {
   }
 }
 
-.box-8{
+.box-8 {
   background: var(--Yellow-500);
   padding: 1rem;
   border-radius: 10px;
@@ -176,16 +175,16 @@ body {
 }
 
 .attribution {
-  font-size: var(--Font-size);
+  font-size: clamp(0.9rem, 0.8rem , 1.3rem);
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
   a {
     text-decoration: none;
     color: var(--link);
   }
 }
 
-/* ---- fad-in animation ---- */
+/* ---- fade-in animation ---- */
 .fadeInUp-animation {
   animation: 1.5s fadeInUp;
 }
@@ -202,104 +201,87 @@ body {
 }
 
 /* -------- Media-Queries for Desktop -------- */
-@media (min-width:500px){
-  /* .container {
-    width: 900px;
-    border: 5px solid red;
+/* @media (min-width:27.5rem){
+  body {
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
-    grid-template-columns: auto-fit, minmax(300px, 1fr);
-  } */
-
-body {
-  margin: 0 auto;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  height: 100vh;
-  color: white;
-}
-
-/* container app */
-.container {
-  padding: 1rem;
-  gap: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  max-width: 900px;
-  height: auto;
-  border-radius: 15px;
   }
 
-/* .box-1{
-  width: 100%;
-  height: 150px;
+  .container {
+    margin: 1rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+  }
+  
+  .left {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .box-1 {
+    padding: 10.8rem 7rem;
+    border-radius: 10px;
+  }
+  
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .up {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .box-con {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .big-1 {
+    padding: 7rem 17rem;
+    background: orangered;
+    border-radius: 10px;
+  }
+  
+  .small-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    gap: 1rem;
+  }
+  
+  .box {
+    padding: 7rem;
+    border-radius: 10px;
+    background: goldenrod;
+  }
+  
+  .side {
+    padding: 13rem 7rem;
+    background: lawngreen;
+    border-radius: 10px;
+  }
+  
+  .down {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .box-down-1 {
+    padding: 7rem 8.2rem;
+    border-radius: 10px;
+    background: red;
+  }
+  
+  .box-down-2 {
+    padding: 7rem 16rem;
+    border-radius: 10px;
+    background: #000;
+  }
 } */
-
-.box-con{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.second{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-flow: column wrap;
-}
-
-.box-4{
-  width: 100%;
-}
-
-.box-6{
-  width: 100%;
-}
-
-.box-9{
-  width: 100%;
-}
-
-.third{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.box-5{
-  width: 100%
-}
-
-.box-7{
-  width: 100%;
-}
-
-.box-10{
-  width: 100%;
-}
-
-/* boxes */
-.right-box-1{
-  width: 100%
-}
-
-.right-box-2{
-  width: 100%;
-}
-
-.right-box-3{
-  width: 100%;
-}
-}
