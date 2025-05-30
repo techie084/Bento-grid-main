@@ -9,43 +9,99 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./images/favicon-32x32.png"
     />
     <!-- linking font -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
     </style>
     <!-- linking style-sheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/output.css" />
     <title>Frontend Mentor | Bento grid main</title>
   </head>
-  <body>
+  <body class="py-12 px-4">
     <!-- container -->
-    <div class="container">
-      <!-- left container -->
-      <div class="left">
-        <div class="box-1"></div>
-        <div class="box-1"></div>
-      </div>
-      <!-- right container -->
+    <div class="fadeInUp-animation">
+      <!-- ---- right - container ---- -->
       <div class="right">
-        <div class="up">
-      <!-- three divided Colum divs -->
-      <div class="box-con">
-        <div class="big-1"></div>
-          <div class="small-1">
-            <div class="box"></div>
-            <div class="box"></div>
+        <div class="right-up">
+          <div class="right-up-1">
+            <div class="big-box-1">
+              <h4>
+                Social Media <span class="color-txt"> 10x </span>
+                <span class="italic-txt"> Faster </span> with AI
+              </h4>
+              <img
+                src="./images/illustration-five-stars.webp"
+                alt="illustration-five-stars-img"
+              />
+              <p>Over 4,000 5-star reviews</p>
+            </div>
+            <div class="smaller-box">
+              <div class="small-box-1">
+                <img
+                  src="./images/illustration-multiple-platforms.webp"
+                  alt="illustration-multiple-platforms-img"
+                />
+                Manage multiple accounts and platforms.
+              </div>
+              <div class="small-box-2">
+                Maintain a consistent posting schedule.
+                <img
+                  src="./images/illustration-consistent-schedule.webp"
+                  alt="illustration-consistent-schedule-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="right-up-2">
+            Schedule to social media
+            <img
+              src="./images/illustration-schedule-posts.webp"
+              alt="illustration-schedule-posts-img"
+            />
+            <p>
+              Optimize post timing to publish content at the perfect time for
+              your audience
+            </p>
+          </div>
+        </div>
+        <div class="right-down">
+          <div class="right-down-box-1">
+            <img
+              src="./images/illustration-grow-followers.webp"
+              alt="illustration-grow-followers-img"
+            />
+            Grow followers with non-stop content.
+          </div>
+          <div class="right-down-box-2">
+            >56%
+            <p>faster audience growth</p>
+            <img
+              src="./images/illustration-audience-growth.webp"
+              alt="illustration-audience-growth-img"
+            />
+          </div>
         </div>
       </div>
-      <!-- side container -->
-      <div class="side"></div>
+      <!-- ---- left - container ---- -->
+      <div class="left">
+        <div class="box-left-1">
+          Create and schedule content <span>quicker.</span>
+          <img
+            src="./images/illustration-create-post.webp"
+            alt="illustration-create-post-img"
+          />
+        </div>
+        <div class="box-left-2">
+          Write your content using AI
+          <img
+            src="./images/illustration-ai-content.webp"
+            alt="illustration-ai-content-img
+          "
+          />
+        </div>
       </div>
-      <!-- down container -->
-          <div class="down">
-            <div class="box-down-1"></div>
-            <div class="box-down-2"></div>
-          </div>
     </div>
 
     <!-- todo: -->
